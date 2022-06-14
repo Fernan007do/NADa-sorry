@@ -1,0 +1,61 @@
+.background-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2em;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    background: url(../img/sebastian-unrau-sp-p7uuT0tw-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    max-height: 517px;
+
+}
+
+.background-image--gallery {
+    justify-content: center;
+    background: url(../img/13.webp);
+    background-color: #5a626f;
+    background-blend-mode: multiply;
+    color: #fff;
+    background-attachment: fixed;
+    transition-duration: 1000ms;
+}
+
+
+
+.background-image--queHacer {
+    justify-content: center;
+    background: url(../img/12.webp);
+    background-color: #5a626f;
+    background-blend-mode: multiply;
+    color: #fff;
+    background-attachment: fixed;
+
+}
+
+.background-image--servicios {
+    justify-content: center;
+    background: url(../img/11.webp);
+    background-color: #5a626f;
+    background-blend-mode: multiply;
+    color: #fff;
+    background-attachment: fixed;
+
+}
+
+.cont--background-light {
+    background:$clr-bg-light;
+    color:$clr-text;
+
+
+}
+
+.cont--background-accent {
+    background:$clr-icons;
+    color:$clr-bg-light;
+
+}
+

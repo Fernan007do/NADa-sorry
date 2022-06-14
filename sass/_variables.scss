@@ -1,0 +1,28 @@
+$clr-icons: #B1CA65;
+$clr-text: #000000;
+$clr-accent: #9277AC;
+$clr-text-accent: #3D5100;
+$clr-primary: #607914;
+$clr-bg-dark: #49504D;
+$clr-bg-light: #ffffff;
+$input-color: #80868B;
+$border-color: #DADCE0;
+
+/*===== Fuente y tipografia =====*/
+$ff-serif: 'Barlow', sans-serif;
+$ff-title: 'Shadows Into Light', cursive;
+$form-font: 'Roboto', sans-serif;
+$normal-font-size: 1.125rem;
+$small-font-size: .75rem;
+
+/* fluid scale con Utopia */
+
+
+$step--2: clamp(0.56rem, calc(0.51rem + 0.27vw), 0.75rem);
+$step--1: clamp(0.75rem, calc(0.66rem + 0.44vw), 1.06rem);
+$step-0: clamp(1.00rem, calc(0.86rem + 0.71vw), 1.50rem);
+$step-1: clamp(1.33rem, calc(1.11rem + 1.13vw), 2.12rem);
+$step-2: clamp(1.78rem, calc(1.43rem + 1.75vw), 3.00rem);
+$step-3: clamp(2.37rem, calc(1.83rem + 2.67vw), 4.24rem);
+$step-4: clamp(3.16rem, calc(2.35rem + 4.06vw), 6.00rem);
+$step-5: clamp(4.21rem, calc(2.99rem + 6.10vw), 8.48rem);

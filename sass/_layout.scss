@@ -1,0 +1,642 @@
+.encabezado {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    top: -2em;
+    left: 0;
+    padding: 0 1em 0 1em;
+}
+
+.men {
+    display: flex;
+    width: 100%;
+    gap: .3em;
+    justify-content: space-evenly;
+    margin-top: 0;
+}
+
+@media (Min-width: 992px) {
+
+    .men__link {
+        cursor: pointer;
+        border: 0;
+        background: transparent;
+        color: $clr-text-accent;
+        text-transform: uppercase;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background: rgba(136, 162, 54, .25);
+            height: .2em;
+            width: 20%;
+            left: 40%;
+            top: 50%;
+            transform-origin: center;
+            transition: transform 200ms cubic-bezier(1, -0.03, .48, 1.52);
+            
+        }
+
+        &:hover::after,
+        &:focus::after {
+            transform: scale(5, 5)
+        }   
+    }
+
+}
+
+
+.intro {
+    text-align: center;
+    margin-block: 1em;
+}
+
+
+.cont--background-dark {
+    background: $clr-accent;
+    color: $clr-bg-light;
+}
+
+.splited-cont {
+    width: 100%;
+    padding-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, Minmax(250px, 1fr));
+    gap: 1em;
+    align-items: center;
+
+
+    &__body {
+        text-align: center;
+    }
+}
+
+@media screen and (Min-width:533px) and (max-width:803px){
+    /* es para acceder al tercer item en la seccion de opiniones,
+    se me desacomoda un poco cuando esta en el rango ya indicado */
+    .splited-cont>*+*+*{
+        grid-column: 1/3;
+        
+    }
+
+    .opinion-cont__body{
+        max-width: 400px;
+    }
+
+    /* es para la pagina contactos */
+
+    #ubicacion {
+        grid-template-areas: 
+        "descripcion"
+        "mapa";
+    }
+
+    .ubication-cont{
+        grid-area: descripcion;
+        background-color: $clr-accent;
+
+        &__map{
+            grid-area: mapa;
+        }
+    }
+
+    
+
+}
+
+.ubication-cont{
+    transition-duration: 350ms;
+
+    &:hover{
+        background-color:$clr-accent;
+        color: #fff;
+    }
+    
+}
+
+
+#reserva {
+    transition-duration: 350ms;
+
+    &:hover{
+        border: .5rem solid $clr-icons;
+    
+    }
+}
+
+
+.faqs {
+    padding-block: 1rem;
+    transition-duration: 350ms;
+
+    &:hover {
+        background-color: #80868B;
+        color: #fff;
+    }
+}
+
+
+
+
+.title {
+    color: $clr-bg-light;
+    margin: 0;
+    text-align: center;
+    font-style: normal;
+    text-shadow: #5a626f;
+    font-size: $step-4;
+}
+
+.section-title {
+    margin-inline: 2rem;
+    text-align: center;
+}
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ;
+}
+
+.opinion-cont{
+
+    &__icon {
+        position: relative;
+        top: 1em;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__body {
+        text-align: center;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    &__name {
+        margin-top: 0;
+        text-align: right;
+        text-transform: capitalize;
+    }
+
+}
+
+
+
+
+
+
+
+
+.big-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    &__cont {
+        align-items: flex-start;
+    
+    
+    }
+    
+    &__element {
+        padding-left: 2em;
+    }
+    
+    &__title {
+        font-style: italic;
+        font-size: $step-3;
+    }
+}
+
+
+
+.contact-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pie-pagina {
+
+    background: rgba(87, 76, 76, 0.904);
+    color: #fff;
+
+    &__title {
+        text-align: center;
+        font-weight: 300;
+    }
+    
+    &__end {
+        font-weight: 300;
+        font-size: $small-font-size;
+        text-align: center;
+    
+    }
+}
+
+
+
+.redes {
+    width: 100%;
+    display: flex;
+    color: #fff;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+
+/* CONTACTOS */
+
+
+.ubication-cont{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+
+    &__title {
+        margin-top: 0;
+        font-size: $step-4;
+    }
+    
+    &__body{
+        text-align: center;
+    }
+    
+    &__map{
+        align-self: center;
+        justify-self: center;
+        height: 100%;
+    }
+    
+}
+
+.calendar__image {
+    width: Min(80%, 400px);
+}
+
+.faqs{
+    padding-left: 1em ;
+
+}
+
+/* Estilo Preguntas Frecuentes */
+
+.details,
+.show,
+.hide:target {
+  display: none;
+}
+.hide:target + .show,
+.hide:target ~ .details {
+  display: block;
+}
+
+.hide{
+    color: #000000;
+
+}
+
+.show{
+    color:$clr-text-accent;
+
+}
+
+.dumb-question{
+    font-weight: 700;
+    position: relative;
+    
+
+}
+
+
+
+/* Galería */
+.slider{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.slider--2{
+    margin-top: 0;
+    justify-content: center;
+}
+
+.slider-image{
+    width: Min(90% , 700px);
+}
+
+.slider__description {
+    text-align: center;
+    width: 100%;
+
+}
+
+.slider__description--2 {
+    display: inline-block;
+    width: Min(40% , 300px);
+    margin-inline: 1em;
+}
+
+.gallery-cont {
+    display: grid;
+    gap: 1.5rem;
+    
+
+}
+
+/* MEdia queries para Galería */
+
+@media screen and (Min-width:380px){
+    .gallery-cont{
+        grid-template-columns: repeat(3,1fr);
+        gap: .5rem ;
+        grid-auto-rows: 150px;
+        
+        
+
+    }
+
+    .gallery-item {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .gallery-item:nth-child(1) {
+        grid-column-start: span 2;
+        grid-row-start: span 2;
+    }
+
+    .gallery-item:nth-child(5) {
+        grid-column-start: span 2;
+        
+    }
+
+    .gallery-item:nth-child(6) {
+        grid-row-start: span 2;
+    }
+
+
+
+
+    
+}
+
+@media screen and (Min-width:720px){
+    .gallery-cont{
+        grid-template-columns: repeat(4,1fr);
+        gap: .5rem ;
+        grid-auto-rows: 200px;
+    }
+
+    .gallery-item {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .gallery-item:nth-child(4) {
+        grid-column-start: span 2;
+        grid-row-start: span 2;
+    }
+
+    .gallery-item:nth-child(5) {
+        grid-column-start: span 2;
+        
+    }
+
+    .gallery-item:nth-child(6) {
+        grid-row-start: span 2;
+        grid-column-start: span 2;
+    }
+
+    .gallery-item:nth-child(9) {
+        grid-row-start: span 2;
+        
+    }
+}
+
+@media screen and (Min-width:1080px){
+    .gallery-cont{
+        grid-template-columns: repeat(6,1fr);
+        gap: .5rem ;
+        grid-auto-rows: 300px;
+    }
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, Minmax(100px, 1fr));
+    gap: .5em;
+    padding: 2em;
+    max-width: 800px;
+
+
+}
+
+.services-icon{
+    position:relative;
+
+    &__overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(43.5, 30.2, 56.1, .6) ;
+        border-radius: 8px;
+        font-family: $ff-serif;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__title {
+        font-size: $step-1;
+        font-weight: 500;
+    }
+
+    &__description {
+        font-size: $step-0;
+    }
+
+    &__img{
+        display: block;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 4px solid black;
+        width: 100%;
+        padding: 2em;
+        
+    }
+    
+}
+
+
+
+.services-icon__overlay--v{
+    background: rgba(136, 162, 54, .6) ;
+    color: #000000;
+}
+
+/* Esta animacion de Lluvia se ve en la pagina queHaacer */
+.services-icon__overlay--rain{
+    background: url(../img/rain.png);
+    animation: rain .3s linear infinite;
+}
+
+@keyframes rain
+{
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 20% 100%;
+    }
+
+    
+}
+
+.services-icon__overlay--blur{
+    backdrop-filter: blur(5px);
+}
+
+
+
+.services-icon__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.services-icon__overlay:hover >*{
+    transform: translateY(0);
+}
+
+
+.relleno {
+    display: none;
+}
+
+@media screen and (Min-width: 511px){
+    .services-list{
+        width: 100%;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr); 
+        grid-area: lista;   
+    }
+
+    .services{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .services-icon__img{
+        border: 6px solid black;
+    }
+
+    .relleno{
+        display: inline-block;
+        background: #9277AC;
+        height: 10em;
+        width: 10%;
+
+    }
+
+
+
+
+
+    
+}
+
+.day-selector{
+
+    &__block{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    &__header{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    &__body{
+        text-align: center;
+        
+    }
+
+}
+
+
+.day-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, Minmax(200px, 1fr));
+    gap: 4rem;
+    padding: 2em;
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        height: 20em;
+        border: 2px dashed black;
+        position: relative;
+    }
+    
+    &__item{
+        border-radius:10px;
+        height: 100%;
+        object-fit: cover;
+    
+    }
+    
+    &__icon {
+        width: 35%;
+        border: 3px solid white;
+        border-radius: 50%;
+        position: absolute;
+        align-self: center;
+        bottom: -3rem;
+    }
+    
+}
+
+
+
+@media screen and (Min-width: 822px) and (max-width: 1095px) {
+
+    .day-card__box:last-child{
+        grid-column: 2 / 3;
+
+    }
+
+
+}
