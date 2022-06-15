@@ -14,37 +14,36 @@
 
 }
 
-.background-image--gallery {
+// Mixins
+
+@mixin bg-conf($url) {
+    background:$url;
     justify-content: center;
-    background: url(../img/13.webp);
-    background-color: #5a626f;
-    background-blend-mode: multiply;
     color: #fff;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #5a626f;
+    background-blend-mode: multiply;
+
+
+}
+
+.background-image--gallery {
+    @include bg-conf(url(../img/13.webp));
     transition-duration: 1000ms;
 }
 
-
-
 .background-image--queHacer {
-    justify-content: center;
-    background: url(../img/12.webp);
-    background-color: #5a626f;
-    background-blend-mode: multiply;
-    color: #fff;
-    background-attachment: fixed;
-
+    @include bg-conf(url(../img/12.webp));
 }
 
 .background-image--servicios {
-    justify-content: center;
-    background: url(../img/11.webp);
-    background-color: #5a626f;
-    background-blend-mode: multiply;
-    color: #fff;
-    background-attachment: fixed;
-
+    @include bg-conf(url(../img/11.webp));
 }
+
+
 
 .cont--background-light {
     background:$clr-bg-light;

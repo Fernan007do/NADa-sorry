@@ -1,6 +1,14 @@
 @charset "UTF-8";
+/* maps */
 /*===== Fuente y tipografia =====*/
 /* fluid scale con Utopia */
+.cent, .services-icon__overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo {
   margin-top: 3em;
   width: 5rem;
@@ -15,22 +23,6 @@
 }
 .logo__title:hover {
   font-size: 3em;
-}
-
-.bot {
-  margin-left: 2em;
-  font-size: 0.7em;
-  text-transform: uppercase;
-  color: #000000;
-  padding: 0.2em;
-  border: 2px solid black;
-  transition-duration: 150ms;
-  width: 5em;
-}
-.bot:hover {
-  color: #ffffff;
-  background: #000000;
-  font-weight: 400;
 }
 
 .bot--contrast {
@@ -117,6 +109,87 @@
   box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
 }
 
+/* Algunos Botones que con mixins + maps */
+.bot {
+  margin-left: 2em;
+  padding: 0.2em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  width: 5em;
+  color: #000000;
+  border: 2px solid black;
+  transition-duration: 150ms;
+}
+.bot:hover {
+  color: #ffffff;
+  background: #000000;
+  font-weight: 400;
+}
+
+.bot-primary {
+  margin-left: 2em;
+  padding: 0.2em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  width: 5em;
+  background-color: #B1CA65;
+}
+
+.bot-secondary {
+  margin-left: 2em;
+  padding: 0.2em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  width: 5em;
+  background-color: #9277AC;
+}
+
+.bot-black {
+  margin-left: 2em;
+  padding: 0.2em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  width: 5em;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.bot-green {
+  margin-left: 2em;
+  padding: 0.2em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  width: 5em;
+  background-color: #3D5100;
+}
+
+.bot-green-2 {
+  margin-left: 2em;
+  padding: 0.2em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  width: 5em;
+  background-color: #607914;
+}
+
+.bot-grey {
+  margin-left: 2em;
+  padding: 0.2em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  width: 5em;
+  background-color: #49504D;
+}
+
+.bot-white {
+  margin-left: 2em;
+  padding: 0.2em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  width: 5em;
+  background-color: #ffffff;
+}
+
 .background-image {
   display: flex;
   flex-direction: column;
@@ -133,31 +206,40 @@
 }
 
 .background-image--gallery {
-  justify-content: center;
   background: url(../img/13.webp);
-  background-color: #5a626f;
-  background-blend-mode: multiply;
+  justify-content: center;
   color: #fff;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #5a626f;
+  background-blend-mode: multiply;
   transition-duration: 1000ms;
 }
 
 .background-image--queHacer {
-  justify-content: center;
   background: url(../img/12.webp);
-  background-color: #5a626f;
-  background-blend-mode: multiply;
+  justify-content: center;
   color: #fff;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #5a626f;
+  background-blend-mode: multiply;
 }
 
 .background-image--servicios {
-  justify-content: center;
   background: url(../img/11.webp);
-  background-color: #5a626f;
-  background-blend-mode: multiply;
+  justify-content: center;
   color: #fff;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #5a626f;
+  background-blend-mode: multiply;
 }
 
 .cont--background-light {
@@ -236,7 +318,7 @@
   text-align: center;
 }
 
-@media screen and (Min-width: 533px) and (max-width: 803px) {
+@media screen and (min-width: 533px) and (max-width: 803px) {
   /* es para acceder al tercer item en la seccion de opiniones,
   se me desacomoda un poco cuando esta en el rango ya indicado */
   .splited-cont > * + * + * {
@@ -514,6 +596,7 @@
   max-width: 800px;
 }
 
+/* Extends juuju  */
 .services-icon {
   position: relative;
 }
@@ -527,10 +610,6 @@
   border-radius: 8px;
   font-family: "Barlow", sans-serif;
   color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   opacity: 0;
   transition: opacity 0.25s;
 }
@@ -660,13 +739,6 @@
     grid-column: 2/3;
   }
 }
-.cent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 *,
 *::before,
 *::after {

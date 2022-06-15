@@ -8,6 +8,20 @@ $clr-bg-light: #ffffff;
 $input-color: #80868B;
 $border-color: #DADCE0;
 
+
+/* maps */
+
+$colours: (
+    "primary":$clr-icons,
+    "secondary":$clr-accent,
+    "black":$clr-text,
+    "green":$clr-text-accent,
+    "green-2":$clr-primary,
+    "grey":$clr-bg-dark,
+    "white":$clr-bg-light,
+);
+
+
 /*===== Fuente y tipografia =====*/
 $ff-serif: 'Barlow', sans-serif;
 $ff-title: 'Shadows Into Light', cursive;

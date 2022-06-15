@@ -75,7 +75,7 @@
     }
 }
 
-@media screen and (Min-width:533px) and (max-width:803px){
+@media screen and (min-width:533px) and (max-width:803px){
     /* es para acceder al tercer item en la seccion de opiniones,
     se me desacomoda un poco cuando esta en el rango ya indicado */
     .splited-cont>*+*+*{
@@ -446,10 +446,13 @@
 
 }
 
+
+/* Extends juuju  */
 .services-icon{
     position:relative;
 
     &__overlay{
+        @extend .cent;
         position: absolute;
         top: 0;
         left: 0;
@@ -459,10 +462,6 @@
         border-radius: 8px;
         font-family: $ff-serif;
         color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         opacity: 0;
         transition: opacity 0.25s;
 
