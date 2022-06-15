@@ -739,6 +739,8 @@
     grid-column: 2/3;
   }
 }
+/*  extend en "_layout---- linea 455
+    maps , mixin y condicional en "_componentes" lina 118 */
 *,
 *::before,
 *::after {
